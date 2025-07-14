@@ -13,11 +13,6 @@ const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 export async function fetchRevenue() {
   try {
-    // Artificially delay a response for demo purposes.
-    // Don't do this in production :)
-
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
 
     return data;
