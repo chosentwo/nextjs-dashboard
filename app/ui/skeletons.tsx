@@ -1,6 +1,6 @@
 // Loading animation
 const shimmer =
-  'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent';
+  "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent"
 
 export function CardSkeleton() {
   return (
@@ -15,7 +15,7 @@ export function CardSkeleton() {
         <div className="h-7 w-20 rounded-md bg-gray-200" />
       </div>
     </div>
-  );
+  )
 }
 
 export function CardsSkeleton() {
@@ -26,7 +26,7 @@ export function CardsSkeleton() {
       <CardSkeleton />
       <CardSkeleton />
     </>
-  );
+  )
 }
 
 export function RevenueChartSkeleton() {
@@ -41,7 +41,7 @@ export function RevenueChartSkeleton() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export function InvoiceSkeleton() {
@@ -56,7 +56,7 @@ export function InvoiceSkeleton() {
       </div>
       <div className="mt-2 h-4 w-12 rounded-md bg-gray-200" />
     </div>
-  );
+  )
 }
 
 export function LatestInvoicesSkeleton() {
@@ -79,7 +79,7 @@ export function LatestInvoicesSkeleton() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default function DashboardSkeleton() {
@@ -99,7 +99,7 @@ export default function DashboardSkeleton() {
         <LatestInvoicesSkeleton />
       </div>
     </>
-  );
+  )
 }
 
 export function TableRowSkeleton() {
@@ -136,7 +136,7 @@ export function TableRowSkeleton() {
         </div>
       </td>
     </tr>
-  );
+  )
 }
 
 export function InvoicesMobileSkeleton() {
@@ -160,7 +160,7 @@ export function InvoicesMobileSkeleton() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export function InvoicesTableSkeleton() {
@@ -214,5 +214,53 @@ export function InvoicesTableSkeleton() {
         </div>
       </div>
     </div>
-  );
+  )
+}
+
+export function CustomersTableSkeleton() {
+  return (
+    <div className="mt-6 flow-root">
+      <div className="inline-block min-w-full align-middle">
+        <div className="rounded-lg bg-gray-50 p-2 md:pt-0">
+          <div className="md:hidden">
+            <InvoicesMobileSkeleton />
+            <InvoicesMobileSkeleton />
+            <InvoicesMobileSkeleton />
+            <InvoicesMobileSkeleton />
+            <InvoicesMobileSkeleton />
+            <InvoicesMobileSkeleton />
+          </div>
+          <table className="hidden min-w-full text-gray-900 md:table">
+            <thead className="rounded-lg text-left text-sm font-normal">
+              <tr>
+                <th scope="col" className="px-4 py-5 font-medium sm:pl-6">
+                  Name
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Email
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Total Invoices
+                </th>
+                <th scope="col" className="px-3 py-5 font-medium">
+                  Total Pending
+                </th>
+                <th scope="col" className="px-4 py-5 font-medium">
+                  Total Paid
+                </th>
+              </tr>
+            </thead>
+            <tbody className="bg-white">
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+              <TableRowSkeleton />
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  )
 }
